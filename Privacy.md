@@ -18,7 +18,7 @@ Weather data is provided by Open-Meteo through the AIS Weather Cloudflare Worker
 
 ## Advertising
 
-Ads are disabled by default in the current public configuration. The app includes advertising SDK infrastructure so ads can be enabled later through remote configuration. If ads are enabled, supported ad providers may process advertising-related data according to their own policies and any required consent flow.
+The app can show ads through remote configuration. Supported ad providers may process advertising-related data according to their own policies and any required consent flow. Premium users should not see ads in production builds.
 
 ## Accounts
 
