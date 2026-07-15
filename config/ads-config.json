@@ -1,7 +1,7 @@
 {
   "version": 1,
   "enabled": true,
-  "provider": "yandex",
+  "provider": "admob",
   "testMode": true,
   "refreshMinutes": 60,
   "frequency": {
@@ -23,13 +23,13 @@
     "forecastInline": true,
     "locationsBottom": true,
     "settingsBottom": true,
-    "premiumRewardedPreview": true,
-    "interstitialOnNaturalBreak": true,
-    "appOpen": true
+    "premiumRewardedPreview": false,
+    "interstitialOnNaturalBreak": false,
+    "appOpen": false
   },
   "support": {
     "contactEmail": "support@metosapps.com",
     "privacyPolicyUrl": "https://raw.githubusercontent.com/metosapps/AISWeatherRemoteConfig/main/Privacy.md"
   },
-  "notes": "Test ads are enabled with Yandex demo ad units. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
+  "notes": "AdMob test banner ads are enabled with Google's official sample ad unit IDs. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
 }
