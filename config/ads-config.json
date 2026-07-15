@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "enabled": false,
+  "provider": "yandex",
+  "testMode": true,
+  "refreshMinutes": 60,
+  "frequency": {
+    "minSecondsBetweenBanners": 45
+  },
+  "adUnits": {
+    "banner": "ca-app-pub-3940256099942544/6300978111",
+    "yandexBanner": "demo-banner-yandex",
+    "yandexAppOpen": "demo-appopenad-yandex",
+    "yandexInterstitial": "demo-interstitial-yandex",
+    "yandexRewarded": "demo-rewarded-yandex",
+    "native": "ca-app-pub-3940256099942544/2247696110",
+    "rewarded": "ca-app-pub-3940256099942544/5224354917",
+    "interstitial": "ca-app-pub-3940256099942544/1033173712"
+  },
+  "placements": {
+    "homeAfterHero": false,
+    "homeAfterHourly": false,
+    "forecastInline": false,
+    "locationsBottom": false,
+    "settingsBottom": false,
+    "premiumRewardedPreview": false,
+    "interstitialOnNaturalBreak": false,
+    "appOpen": false
+  },
+  "notes": "Keep enabled=false until Yandex ad units, privacy policy, consent messages, and Play Data Safety are configured."
+}
