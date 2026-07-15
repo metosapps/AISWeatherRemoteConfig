@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "enabled": false,
+  "enabled": true,
   "provider": "yandex",
   "testMode": true,
   "refreshMinutes": 60,
@@ -18,18 +18,18 @@
     "interstitial": "ca-app-pub-3940256099942544/1033173712"
   },
   "placements": {
-    "homeAfterHero": false,
-    "homeAfterHourly": false,
-    "forecastInline": false,
-    "locationsBottom": false,
-    "settingsBottom": false,
-    "premiumRewardedPreview": false,
-    "interstitialOnNaturalBreak": false,
-    "appOpen": false
+    "homeAfterHero": true,
+    "homeAfterHourly": true,
+    "forecastInline": true,
+    "locationsBottom": true,
+    "settingsBottom": true,
+    "premiumRewardedPreview": true,
+    "interstitialOnNaturalBreak": true,
+    "appOpen": true
   },
   "support": {
     "contactEmail": "support@metosapps.com",
     "privacyPolicyUrl": "https://raw.githubusercontent.com/metosapps/AISWeatherRemoteConfig/main/Privacy.md"
   },
-  "notes": "Keep enabled=false until Yandex ad units, privacy policy, consent messages, and Play Data Safety are configured."
+  "notes": "Test ads are enabled with Yandex demo ad units. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
 }
