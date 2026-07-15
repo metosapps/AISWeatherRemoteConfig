@@ -18,7 +18,7 @@ Weather data is provided by Open-Meteo through the AIS Weather Cloudflare Worker
 
 ## Advertising
 
-The MVP contains no ads and no ad SDK.
+Ads are disabled by default in the current public configuration. The app includes advertising SDK infrastructure so ads can be enabled later through remote configuration. If ads are enabled, supported ad providers may process advertising-related data according to their own policies and any required consent flow.
 
 ## Accounts
 
