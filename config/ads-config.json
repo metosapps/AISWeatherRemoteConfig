@@ -5,7 +5,9 @@
   "testMode": true,
   "refreshMinutes": 60,
   "frequency": {
-    "minSecondsBetweenBanners": 45
+    "minSecondsBetweenBanners": 45,
+    "minSecondsBetweenInterstitials": 20,
+    "minSecondsBetweenAppOpen": 10
   },
   "adUnits": {
     "banner": "ca-app-pub-3940256099942544/6300978111",
@@ -15,21 +17,23 @@
     "yandexRewarded": "demo-rewarded-yandex",
     "native": "ca-app-pub-3940256099942544/2247696110",
     "rewarded": "ca-app-pub-3940256099942544/5224354917",
-    "interstitial": "ca-app-pub-3940256099942544/1033173712"
+    "interstitial": "ca-app-pub-3940256099942544/1033173712",
+    "appOpen": "ca-app-pub-3940256099942544/9257395921"
   },
   "placements": {
     "homeAfterHero": true,
+    "homeNativeAfterAdvice": true,
     "homeAfterHourly": true,
     "forecastInline": true,
     "locationsBottom": true,
     "settingsBottom": true,
-    "premiumRewardedPreview": false,
-    "interstitialOnNaturalBreak": false,
-    "appOpen": false
+    "premiumRewardedPreview": true,
+    "interstitialOnNaturalBreak": true,
+    "appOpen": true
   },
   "support": {
     "contactEmail": "support@metosapps.com",
     "privacyPolicyUrl": "https://raw.githubusercontent.com/metosapps/AISWeatherRemoteConfig/main/Privacy.md"
   },
-  "notes": "AdMob test banner ads are enabled with Google's official sample ad unit IDs. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
+  "notes": "AdMob test ads are enabled for banner, native, interstitial, rewarded, and app open using Google's official sample ad unit IDs. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
 }
