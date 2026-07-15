@@ -6,8 +6,8 @@
   "refreshMinutes": 60,
   "frequency": {
     "minSecondsBetweenBanners": 45,
-    "minSecondsBetweenInterstitials": 20,
-    "minSecondsBetweenAppOpen": 10
+    "minSecondsBetweenInterstitials": 180,
+    "minSecondsBetweenAppOpen": 600
   },
   "adUnits": {
     "banner": "ca-app-pub-3940256099942544/6300978111",
@@ -21,7 +21,7 @@
     "appOpen": "ca-app-pub-3940256099942544/9257395921"
   },
   "placements": {
-    "homeAfterHero": true,
+    "homeAfterHero": false,
     "homeNativeAfterAdvice": true,
     "homeAfterHourly": true,
     "forecastInline": true,
@@ -35,5 +35,5 @@
     "contactEmail": "support@metosapps.com",
     "privacyPolicyUrl": "https://raw.githubusercontent.com/metosapps/AISWeatherRemoteConfig/main/Privacy.md"
   },
-  "notes": "AdMob test ads are enabled for banner, native, interstitial, rewarded, and app open using Google's official sample ad unit IDs. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
+  "notes": "Policy-safe AdMob test setup: top-of-home banner is disabled to avoid accidental clicks near primary controls, native ads include attribution, full-screen ads use conservative cooldowns, and rewarded ads remain user-initiated. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
 }
