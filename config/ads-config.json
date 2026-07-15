@@ -27,5 +27,9 @@
     "interstitialOnNaturalBreak": false,
     "appOpen": false
   },
+  "support": {
+    "contactEmail": "support@metosapps.com",
+    "privacyPolicyUrl": "https://raw.githubusercontent.com/metosapps/AISWeatherRemoteConfig/main/Privacy.md"
+  },
   "notes": "Keep enabled=false until Yandex ad units, privacy policy, consent messages, and Play Data Safety are configured."
 }
