@@ -33,7 +33,7 @@
   },
   "support": {
     "contactEmail": "support@metosapps.com",
-    "privacyPolicyUrl": "https://raw.githubusercontent.com/metosapps/AISWeatherRemoteConfig/main/Privacy.md"
+    "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
   },
   "notes": "Policy-safe AdMob test setup: top-of-home banner is disabled to avoid accidental clicks near primary controls, native ads include attribution, full-screen ads use conservative cooldowns, and rewarded ads remain user-initiated. Replace demo units with production IDs before release and keep consent, privacy policy, and Play Data Safety updated."
 }
