@@ -1,6 +1,6 @@
 # Privacy Policy
 
-AIS Weather is designed to be privacy-friendly.
+Weather is designed to be privacy-friendly.
 
 ## Data We Use
 
@@ -10,11 +10,11 @@ AIS Weather is designed to be privacy-friendly.
 
 ## How Location Is Used
 
-Location is used only to request weather for your current area while you use the app. AIS Weather does not request background location access. The app does not require an account and does not sell personal data.
+Location is used only to request weather for your current area while you use the app. Weather does not request background location access. The app does not require an account and does not sell personal data.
 
 ## Weather Data
 
-Weather data is provided by Open-Meteo through the AIS Weather Cloudflare Worker proxy. The proxy normalizes and caches weather responses to reduce API usage.
+Weather data is provided by Open-Meteo through the Weather Cloudflare Worker proxy. The proxy normalizes and caches weather responses to reduce API usage.
 
 ## Radar Data
 
@@ -22,7 +22,7 @@ Radar and map views may use RainViewer, Carto, and OpenStreetMap data. These pro
 
 ## Usage Analytics
 
-AIS Weather can send basic anonymous app events to Firebase Analytics and the Cloudflare Worker to help improve reliability and product decisions. Events may include screen names, app version, Android SDK version, setting changes, weather refresh events, and broad weather codes.
+Weather can send basic anonymous app events to Firebase Analytics and the Cloudflare Worker to help improve reliability and product decisions. Events may include screen names, app version, Android SDK version, setting changes, weather refresh events, and broad weather codes.
 
 Analytics events do not include account data, city names, precise coordinates, contacts, or advertising identifiers. Users can turn usage analytics off from Settings.
 
@@ -36,7 +36,7 @@ No account is required.
 
 ## Data Sharing
 
-AIS Weather does not sell user data. Weather requests are sent only as needed to provide forecasts. Analytics and advertising data may be processed by Firebase, Google AdMob, Yandex Ads, Cloudflare, and related service providers as described above.
+Weather does not sell user data. Weather requests are sent only as needed to provide forecasts. Analytics and advertising data may be processed by Firebase, Google AdMob, Yandex Ads, Cloudflare, and related service providers as described above.
 
 ## Data Retention
 
@@ -44,11 +44,11 @@ Saved cities and settings remain on your device until you change them, clear app
 
 ## Security
 
-AIS Weather uses HTTPS for network requests. Local app settings and saved cities are stored on your Android device using platform storage.
+Weather uses HTTPS for network requests. Local app settings and saved cities are stored on your Android device using platform storage.
 
 ## Contact
 
-For privacy questions, contact support@metosapps.com.
+For privacy questions, contact chennoufo11@gmail.com.
 
 ## Attribution
 
