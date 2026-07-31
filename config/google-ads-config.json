@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "enabled": false,
+  "provider": "admob",
+  "testMode": true,
+  "refreshMinutes": 60,
+  "frequency": {
+    "minSecondsBetweenBanners": 45,
+    "minSecondsBetweenInterstitials": 180,
+    "minSecondsBetweenAppOpen": 600
+  },
+  "adUnits": {
+    "banner": "ca-app-pub-3940256099942544/6300978111",
+    "native": "ca-app-pub-3940256099942544/2247696110",
+    "rewarded": "ca-app-pub-3940256099942544/5224354917",
+    "interstitial": "ca-app-pub-3940256099942544/1033173712",
+    "appOpen": "ca-app-pub-3940256099942544/9257395921"
+  },
+  "placements": {
+    "homeAfterHero": false,
+    "homeNativeAfterAdvice": false,
+    "homeAfterHourly": false,
+    "forecastInline": false,
+    "locationsBottom": false,
+    "settingsBottom": false,
+    "premiumRewardedPreview": false,
+    "interstitialOnNaturalBreak": false,
+    "appOpen": false
+  },
+  "support": {
+    "contactEmail": "chennoufo11@gmail.com",
+    "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
+  },
+  "notes": "Google Play build. Replace test AdMob units with production units, switch testMode to false, complete UMP/privacy messaging, and enable placements gradually after review."
+}
