@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "enabled": true,
+  "provider": "admob",
+  "testMode": true,
+  "refreshMinutes": 60,
+  "frequency": {
+    "minSecondsBetweenBanners": 45,
+    "minSecondsBetweenInterstitials": 1800,
+    "minSecondsBetweenAppOpen": 2700
+  },
+  "adUnits": {
+    "banner": "",
+    "native": "",
+    "rewarded": "ca-app-pub-3940256099942544/5224354917",
+    "interstitial": "",
+    "rewardedInterstitial": "ca-app-pub-3940256099942544/5354046379",
+    "appOpen": "ca-app-pub-3940256099942544/9257395921"
+  },
+  "placements": {
+    "homeAfterHero": false,
+    "homeNativeAfterAdvice": false,
+    "homeAfterHourly": false,
+    "forecastInline": false,
+    "locationsBottom": false,
+    "settingsBottom": false,
+    "premiumRewardedPreview": true,
+    "interstitialOnNaturalBreak": false,
+    "rewardedInterstitialOnNaturalBreak": true,
+    "appOpen": true
+  },
+  "support": {
+    "contactEmail": "chennoufo11@gmail.com",
+    "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
+  },
+  "notes": "Galaxy Store build. Fullscreen-only mix: App Open, Rewarded Video, and Rewarded Interstitial. Banner and native placements stay disabled."
+}
