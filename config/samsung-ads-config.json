@@ -2,7 +2,7 @@
   "version": 1,
   "enabled": true,
   "provider": "admob",
-  "testMode": true,
+  "testMode": false,
   "refreshMinutes": 60,
   "frequency": {
     "minSecondsBetweenBanners": 45,
@@ -12,10 +12,10 @@
   "adUnits": {
     "banner": "",
     "native": "",
-    "rewarded": "ca-app-pub-3940256099942544/5224354917",
+    "rewarded": "ca-app-pub-8235247040566090/7310424787",
     "interstitial": "",
-    "rewardedInterstitial": "ca-app-pub-3940256099942544/5354046379",
-    "appOpen": "ca-app-pub-3940256099942544/9257395921"
+    "rewardedInterstitial": "ca-app-pub-8235247040566090/8049532904",
+    "appOpen": "ca-app-pub-8235247040566090/4814255399"
   },
   "placements": {
     "homeAfterHero": false,
