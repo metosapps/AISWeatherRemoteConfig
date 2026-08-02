@@ -4,26 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Weather - USA Forecasts for Samsung Galaxy</title>
-  <meta name="description" content="Weather is a USA-first forecast app for Samsung Galaxy with hourly weather, 7-day forecasts, radar, alerts, widgets, sticky notification, and weather wallpapers.">
+  <meta name="description" content="Weather is a USA-first forecast app for Samsung Galaxy with hourly forecasts, 7-day outlooks, rain radar, alerts, widgets, sticky notification, premium themes, and realistic weather wallpapers.">
   <meta property="og:title" content="Weather - USA Forecasts for Samsung Galaxy">
-  <meta property="og:description" content="Hourly forecasts, rain radar, alerts, widgets, premium themes, and adaptive weather wallpapers.">
+  <meta property="og:description" content="A clean Galaxy weather app with radar, alerts, widgets, premium themes, and adaptive weather wallpapers.">
   <meta property="og:image" content="https://metosapps.github.io/AISWeatherRemoteConfig/assets/weather-icon.png">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#0d8fff">
+  <meta name="theme-color" content="#1177d7">
   <link rel="icon" href="assets/weather-icon.png">
   <style>
     :root {
       color-scheme: light;
-      --ink: #10243a;
-      --muted: #5d7087;
-      --paper: #f5f9fc;
+      --ink: #132033;
+      --ink-strong: #071827;
+      --muted: #5d6d82;
+      --subtle: #eef5fb;
+      --paper: #f8fbfd;
       --panel: #ffffff;
-      --line: #dbe8f4;
-      --blue: #0d8fff;
-      --teal: #00b8c8;
-      --sun: #ffc83d;
-      --storm: #27364d;
-      --shadow: rgba(38, 73, 105, 0.18);
+      --line: #d8e6f2;
+      --blue: #1177d7;
+      --blue-deep: #0c4f92;
+      --teal: #00a7b8;
+      --sky: #dff1ff;
+      --sun: #ffca45;
+      --coral: #ff6b5f;
+      --shadow: rgba(34, 72, 104, 0.16);
     }
 
     * { box-sizing: border-box; }
@@ -33,24 +37,25 @@
       font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background:
-        linear-gradient(180deg, rgba(13, 143, 255, 0.10), rgba(245, 249, 252, 0) 34rem),
+        linear-gradient(180deg, #eff8ff 0, var(--paper) 560px),
         var(--paper);
       line-height: 1.55;
     }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
 
+    .inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
     .nav {
       position: sticky;
       top: 0;
-      z-index: 5;
-      border-bottom: 1px solid rgba(219, 232, 244, 0.86);
-      background: rgba(255, 255, 255, 0.88);
+      z-index: 10;
+      border-bottom: 1px solid rgba(216, 230, 242, 0.92);
+      background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(18px);
-    }
-    .inner {
-      width: min(1160px, calc(100% - 32px));
-      margin: 0 auto;
     }
     .nav .inner {
       min-height: 72px;
@@ -63,57 +68,67 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      font-weight: 800;
+      font-weight: 850;
       letter-spacing: 0;
     }
     .brand img {
       width: 44px;
       height: 44px;
       border-radius: 12px;
-      box-shadow: 0 12px 28px rgba(13, 143, 255, 0.26);
+      box-shadow: 0 12px 28px rgba(17, 119, 215, 0.24);
     }
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
       color: var(--muted);
       font-size: 0.95rem;
-      font-weight: 650;
+      font-weight: 700;
     }
-    .nav-links a:hover { color: var(--ink); }
+    .nav-links a:hover { color: var(--ink-strong); }
+    .nav-cta {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #fff;
+      background: var(--blue);
+      box-shadow: 0 12px 26px rgba(17, 119, 215, 0.22);
+    }
+    .nav-cta:hover { color: #fff; filter: brightness(1.04); }
 
     .hero {
-      padding: clamp(42px, 7vw, 82px) 0 clamp(36px, 6vw, 70px);
+      padding: clamp(44px, 7vw, 86px) 0 clamp(38px, 7vw, 82px);
     }
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+      grid-template-columns: minmax(0, 0.94fr) minmax(360px, 1.06fr);
       align-items: center;
-      gap: clamp(30px, 6vw, 76px);
+      gap: clamp(34px, 6vw, 78px);
     }
     .eyebrow {
       width: fit-content;
       margin: 0 0 18px;
       padding: 8px 12px;
-      border: 1px solid rgba(13, 143, 255, 0.24);
+      border: 1px solid #c8e1f5;
       border-radius: 999px;
-      background: #e9f5ff;
-      color: #126cae;
-      font-weight: 800;
+      background: #fff;
+      color: var(--blue-deep);
+      font-weight: 850;
       font-size: 0.9rem;
+      box-shadow: 0 10px 26px rgba(34, 72, 104, 0.08);
     }
     h1 {
       margin: 0;
       max-width: 760px;
-      font-size: clamp(3rem, 8vw, 6.6rem);
-      line-height: 0.95;
+      color: var(--ink-strong);
+      font-size: clamp(3.1rem, 7.8vw, 6.8rem);
+      line-height: 0.94;
       letter-spacing: 0;
     }
     .hero-copy {
       margin: 22px 0 0;
-      max-width: 650px;
+      max-width: 680px;
       color: var(--muted);
-      font-size: clamp(1.08rem, 2vw, 1.28rem);
+      font-size: clamp(1.08rem, 1.9vw, 1.28rem);
     }
     .actions {
       margin-top: 30px;
@@ -136,76 +151,107 @@
       min-height: 48px;
       display: inline-flex;
       align-items: center;
-      border-bottom: 1px solid rgba(16, 36, 58, 0.28);
-      color: #174a76;
-      font-weight: 800;
+      border-bottom: 1px solid rgba(19, 32, 51, 0.28);
+      color: var(--blue-deep);
+      font-weight: 850;
     }
-    .quick-data {
+    .trust-row {
       margin-top: 34px;
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
-      max-width: 650px;
+      max-width: 690px;
     }
-    .data-item,
-    .feature,
-    .premium-item,
-    .policy-card {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.78);
-      box-shadow: 0 18px 48px rgba(38, 73, 105, 0.08);
-    }
-    .data-item {
+    .trust-item {
       min-height: 96px;
       padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.84);
+      box-shadow: 0 16px 42px rgba(34, 72, 104, 0.08);
     }
-    .data-item strong {
+    .trust-item strong {
       display: block;
+      color: var(--ink-strong);
       font-size: 1.05rem;
     }
-    .data-item span {
+    .trust-item span {
       display: block;
       margin-top: 6px;
       color: var(--muted);
       font-size: 0.92rem;
     }
-    .showcase {
+    .hero-visual {
       position: relative;
+      min-height: 560px;
+    }
+    .device-stack {
+      position: absolute;
+      inset: 0;
       display: grid;
-      grid-template-columns: 0.82fr 1fr;
+      grid-template-columns: 0.78fr 1fr;
       gap: 18px;
       align-items: end;
     }
-    .hero-shot {
-      border: 1px solid rgba(255, 255, 255, 0.75);
-      border-radius: 18px;
+    .device-shot {
       overflow: hidden;
-      background: #dcefff;
-      box-shadow: 0 28px 74px rgba(45, 93, 136, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      border-radius: 22px;
+      background: var(--sky);
+      box-shadow: 0 28px 74px rgba(45, 93, 136, 0.23);
     }
-    .hero-shot:first-child {
-      transform: translateY(28px);
+    .device-shot img {
+      width: 100%;
+      aspect-ratio: 1.5;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .device-shot.primary {
+      transform: translateY(38px);
     }
     .icon-float {
       position: absolute;
       left: 4%;
-      top: 0;
-      width: clamp(76px, 10vw, 122px);
-      border-radius: 26px;
-      box-shadow: 0 22px 46px rgba(13, 143, 255, 0.32);
+      top: 3%;
+      width: clamp(78px, 10vw, 128px);
+      border-radius: 28px;
+      box-shadow: 0 22px 46px rgba(17, 119, 215, 0.28);
+      z-index: 2;
+    }
+    .condition-panel {
+      position: absolute;
+      right: 0;
+      bottom: 14px;
+      width: min(300px, 58%);
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 22px 58px rgba(34, 72, 104, 0.16);
+    }
+    .condition-panel strong {
+      display: block;
+      color: var(--ink-strong);
+      font-size: 1.1rem;
+    }
+    .condition-panel span {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.92rem;
     }
 
     section {
-      padding: clamp(54px, 8vw, 94px) 0;
-      border-top: 1px solid rgba(219, 232, 244, 0.82);
+      padding: clamp(58px, 8vw, 98px) 0;
+      border-top: 1px solid rgba(216, 230, 242, 0.86);
     }
     .section-head {
-      max-width: 780px;
-      margin-bottom: 28px;
+      max-width: 800px;
+      margin-bottom: 30px;
     }
     .section-head h2 {
       margin: 0;
+      color: var(--ink-strong);
       font-size: clamp(2rem, 5vw, 3.5rem);
       line-height: 1.06;
       letter-spacing: 0;
@@ -215,13 +261,23 @@
       color: var(--muted);
       font-size: 1.08rem;
     }
-    .features {
+
+    .feature-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
     }
+    .feature,
+    .premium-item,
+    .policy-card,
+    .data-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      box-shadow: 0 18px 48px rgba(34, 72, 104, 0.08);
+    }
     .feature {
-      min-height: 174px;
+      min-height: 178px;
       padding: 22px;
     }
     .mark {
@@ -231,23 +287,30 @@
       place-items: center;
       margin-bottom: 16px;
       border-radius: 12px;
-      background: #e9f5ff;
+      background: var(--subtle);
       color: var(--blue);
       font-weight: 900;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
     .feature h3,
     .premium-item h3,
-    .policy-card h3 {
+    .policy-card h3,
+    .data-card h3 {
       margin: 0;
+      color: var(--ink-strong);
       font-size: 1.08rem;
     }
     .feature p,
     .premium-item p,
-    .policy-card p {
+    .policy-card p,
+    .data-card p {
       margin: 8px 0 0;
       color: var(--muted);
       font-size: 0.96rem;
+    }
+
+    .screens-band {
+      background: #ffffff;
     }
     .gallery {
       display: grid;
@@ -255,78 +318,140 @@
       gap: 14px;
     }
     .shot {
+      margin: 0;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 8px;
       background: #d8eefc;
-      box-shadow: 0 20px 48px rgba(38, 73, 105, 0.14);
+      box-shadow: 0 20px 48px rgba(34, 72, 104, 0.12);
     }
     .shot img {
       width: 100%;
-      height: 100%;
       aspect-ratio: 1.5;
       object-fit: cover;
       object-position: top center;
     }
+    .shot figcaption {
+      padding: 12px 14px 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+      background: #fff;
+    }
+
+    .premium-layout {
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .premium-callout {
+      padding: 28px;
+      border-radius: 8px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(17, 119, 215, 0.96), rgba(0, 167, 184, 0.9)),
+        var(--blue);
+      box-shadow: 0 22px 58px rgba(17, 119, 215, 0.20);
+    }
+    .premium-callout h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    .premium-callout p {
+      margin: 14px 0 0;
+      color: rgba(255, 255, 255, 0.86);
+    }
     .premium-grid,
-    .policy-grid {
+    .policy-grid,
+    .data-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
     }
+    .premium-grid {
+      grid-template-columns: 1fr;
+    }
     .premium-item,
-    .policy-card {
+    .policy-card,
+    .data-card {
       padding: 22px;
-      min-height: 156px;
+      min-height: 144px;
     }
+    .badge-line {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .badge-line span {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .data-band {
+      background: linear-gradient(180deg, var(--paper), #eef7ff);
+    }
+    .data-card a,
+    .policy-card a { color: var(--blue-deep); font-weight: 800; }
+
     .download {
-      background:
-        linear-gradient(135deg, rgba(13, 143, 255, 0.12), rgba(0, 184, 200, 0.10)),
-        #eef7ff;
+      background: #0e2134;
+      color: #fff;
     }
+    .download .section-head h2,
+    .download .section-head p { color: #fff; }
+    .download .section-head p { color: #c8d9e7; }
     .download-panel {
       display: grid;
       grid-template-columns: auto minmax(0, 1fr) auto;
       align-items: center;
       gap: 24px;
       padding: clamp(24px, 5vw, 42px);
-      border: 1px solid #cbe2f5;
+      border: 1px solid rgba(255, 255, 255, 0.16);
       border-radius: 8px;
-      background: rgba(255, 255, 255, 0.78);
-      box-shadow: 0 22px 58px rgba(38, 73, 105, 0.12);
+      background: rgba(255, 255, 255, 0.06);
     }
     .download-panel .icon {
       width: 86px;
       height: 86px;
       border-radius: 22px;
-      box-shadow: 0 16px 36px rgba(13, 143, 255, 0.18);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.24);
     }
     .download-panel h2 {
       margin: 0;
       font-size: clamp(1.7rem, 4vw, 2.8rem);
       line-height: 1.08;
+      letter-spacing: 0;
     }
     .download-panel p {
       margin: 9px 0 0;
-      color: var(--muted);
+      color: #c8d9e7;
     }
     .meta {
       margin-top: 18px;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      color: #2b5a82;
+      color: #d7e8f6;
       font-size: 0.9rem;
     }
     .meta span {
       padding: 6px 9px;
-      border: 1px solid #cfe2f2;
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 999px;
-      background: #f8fcff;
+      background: rgba(255, 255, 255, 0.08);
     }
+
     footer {
-      padding: 34px 0 44px;
-      background: #10243a;
+      padding: 32px 0 44px;
+      background: #071827;
       color: #c5d7e8;
     }
     .footer-row {
@@ -341,44 +466,63 @@
       gap: 16px;
     }
     .footer-links a {
-      color: #ffffff;
+      color: #fff;
       border-bottom: 1px solid rgba(255, 255, 255, 0.34);
     }
 
     @media (max-width: 980px) {
       .hero-grid,
+      .premium-layout,
       .download-panel {
         grid-template-columns: 1fr;
       }
-      .features,
+      .hero-visual {
+        min-height: 500px;
+      }
+      .feature-grid,
       .gallery,
-      .premium-grid,
-      .policy-grid {
+      .policy-grid,
+      .data-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
-      .showcase {
-        max-width: 720px;
-      }
     }
-    @media (max-width: 640px) {
+    @media (max-width: 700px) {
       .nav .inner { min-height: 66px; }
-      .nav-links { gap: 12px; font-size: 0.86rem; }
-      .quick-data,
-      .features,
+      .nav-links {
+        gap: 12px;
+        font-size: 0.86rem;
+      }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .trust-row,
+      .feature-grid,
       .gallery,
-      .premium-grid,
-      .policy-grid {
+      .policy-grid,
+      .data-grid {
         grid-template-columns: 1fr;
       }
-      .showcase {
+      .hero-visual {
+        min-height: auto;
+      }
+      .device-stack {
+        position: relative;
         grid-template-columns: 1fr;
       }
-      .hero-shot:first-child {
+      .device-shot.primary {
         transform: none;
       }
       .icon-float {
         top: 12px;
         left: 12px;
+      }
+      .condition-panel {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        margin-top: 14px;
+      }
+      .download-panel {
+        text-align: left;
       }
     }
   </style>
@@ -392,8 +536,9 @@
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
-        <a href="#screenshots">Screenshots</a>
+        <a href="#screenshots">Screens</a>
         <a href="privacy.html">Privacy</a>
+        <a class="nav-cta" href="https://galaxystore.samsung.com/detail/app.weather.usa.forecast.galaxy2023p">Galaxy Store</a>
       </div>
     </div>
   </nav>
@@ -403,33 +548,39 @@
       <div class="inner hero-grid">
         <div>
           <p class="eyebrow">USA-first weather app for Samsung Galaxy</p>
-          <h1>Weather that feels ready for your day.</h1>
-          <p class="hero-copy">Check current conditions, hourly forecasts, 7-day outlooks, rain radar, alerts, air quality, sticky temperature notification, widgets, and realistic weather wallpapers in one clean Galaxy app.</p>
+          <h1>Forecasts that look as good as they work.</h1>
+          <p class="hero-copy">Weather brings hourly forecasts, 7-day planning, rain radar, alerts, air quality, widgets, sticky temperature notification, and realistic weather wallpapers into one polished Galaxy experience.</p>
           <div class="actions">
             <a href="https://galaxystore.samsung.com/detail/app.weather.usa.forecast.galaxy2023p" aria-label="Open Weather on Galaxy Store">
               <img class="store-badge" src="assets/galaxy-store-badge.jpg" alt="Available on Galaxy Store">
             </a>
-            <a class="text-link" href="privacy.html">Privacy Policy</a>
+            <a class="text-link" href="privacy.html">Read Privacy Policy</a>
           </div>
-          <div class="quick-data" aria-label="App highlights">
-            <div class="data-item">
-              <strong>US defaults</strong>
-              <span>Fahrenheit, mph, inches, 12-hour time, and familiar date formatting.</span>
+          <div class="trust-row" aria-label="App highlights">
+            <div class="trust-item">
+              <strong>Built for USA users</strong>
+              <span>Fahrenheit, mph, inches, 12-hour time, and US-friendly date defaults.</span>
             </div>
-            <div class="data-item">
-              <strong>Fullscreen ads only</strong>
-              <span>App Open, Rewarded Video, and Rewarded Interstitial. No banner or native ads.</span>
+            <div class="trust-item">
+              <strong>No banner clutter</strong>
+              <span>Fullscreen-only ad mix: App Open, Rewarded Video, and Rewarded Interstitial.</span>
             </div>
-            <div class="data-item">
+            <div class="trust-item">
               <strong>Premium ready</strong>
               <span>Monthly, yearly, lifetime, and trial-ready Samsung IAP products.</span>
             </div>
           </div>
         </div>
-        <div class="showcase" aria-hidden="true">
+        <div class="hero-visual" aria-hidden="true">
           <img class="icon-float" src="assets/weather-icon.png" alt="">
-          <img class="hero-shot" src="assets/screen-home-sunny.jpg" alt="">
-          <img class="hero-shot" src="assets/screen-wallpapers.jpg" alt="">
+          <div class="device-stack">
+            <div class="device-shot primary"><img src="assets/screen-home-sunny.jpg" alt=""></div>
+            <div class="device-shot"><img src="assets/screen-wallpapers.jpg" alt=""></div>
+          </div>
+          <div class="condition-panel">
+            <strong>Adaptive weather wallpaper</strong>
+            <span>Sunny, cloudy, rainy, snowy, and night styles follow the current forecast.</span>
+          </div>
         </div>
       </div>
     </header>
@@ -437,10 +588,10 @@
     <section id="features">
       <div class="inner">
         <div class="section-head">
-          <h2>Forecasts, radar, widgets, and wallpapers.</h2>
-          <p>Weather is built for quick checks on the home screen and deeper planning when the forecast matters.</p>
+          <h2>Everything users expect from a modern weather app.</h2>
+          <p>Fast daily checks, detailed forecast screens, and visual weather context for the home screen and lock screen.</p>
         </div>
-        <div class="features">
+        <div class="feature-grid">
           <article class="feature">
             <div class="mark">24h</div>
             <h3>Hourly forecast</h3>
@@ -449,7 +600,7 @@
           <article class="feature">
             <div class="mark">7d</div>
             <h3>7-day outlook</h3>
-            <p>Daily highs and lows, conditions, precipitation chance, and simple trend views for the week ahead.</p>
+            <p>Daily highs and lows, precipitation chance, condition summaries, and week-ahead trends.</p>
           </article>
           <article class="feature">
             <div class="mark">RAD</div>
@@ -459,88 +610,105 @@
           <article class="feature">
             <div class="mark">AQI</div>
             <h3>Air quality</h3>
-            <p>Air quality and pollen insights help users understand outdoor conditions before they go.</p>
+            <p>Air quality and pollen insights help users decide when to go outside and how to plan.</p>
           </article>
           <article class="feature">
             <div class="mark">W</div>
             <h3>Home widgets</h3>
-            <p>Small, medium, and large weather widgets for Samsung Galaxy home screens.</p>
+            <p>Small, medium, and large widgets built for repeated forecast checks on Samsung Galaxy.</p>
           </article>
           <article class="feature">
             <div class="mark">ON</div>
             <h3>Sticky notification</h3>
-            <p>Optional temperature notification keeps the latest condition visible in the notification shade.</p>
+            <p>Optional temperature notification keeps the latest weather visible in the notification shade.</p>
           </article>
           <article class="feature">
             <div class="mark">ART</div>
             <h3>Weather wallpapers</h3>
-            <p>Realistic wallpaper styles adapt to sunny, cloudy, rainy, snowy, and night conditions.</p>
+            <p>Realistic wallpaper styles can be set, shared, or used as forecast-aware visual backgrounds.</p>
           </article>
           <article class="feature">
             <div class="mark">US</div>
-            <h3>Local defaults</h3>
-            <p>Made for USA users first, with international units and languages available from Settings.</p>
+            <h3>Flexible settings</h3>
+            <p>USA defaults first, with international units, languages, themes, and refresh settings available.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="screenshots">
+    <section class="screens-band" id="screenshots">
       <div class="inner">
         <div class="section-head">
-          <h2>Galaxy Store screenshots.</h2>
-          <p>The same updated screenshots prepared for the Galaxy Store listing, converted to lightweight JPG files for faster loading.</p>
+          <h2>Updated Galaxy Store screenshots.</h2>
+          <p>Lightweight JPG screenshots prepared from the same assets used for the Galaxy Store listing.</p>
         </div>
         <div class="gallery" aria-label="Weather app screenshots">
-          <figure class="shot"><img src="assets/screen-home-sunny.jpg" alt="Weather home screen with current conditions"></figure>
-          <figure class="shot"><img src="assets/screen-daily.jpg" alt="Weather forecast screen"></figure>
-          <figure class="shot"><img src="assets/screen-radar.jpg" alt="Weather radar screen"></figure>
-          <figure class="shot"><img src="assets/screen-wallpapers.jpg" alt="Weather wallpapers screen"></figure>
+          <figure class="shot">
+            <img src="assets/screen-home-sunny.jpg" alt="Weather home screen with current conditions">
+            <figcaption>Current weather overview</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/screen-daily.jpg" alt="Weather forecast screen">
+            <figcaption>Forecast details</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/screen-radar.jpg" alt="Weather radar screen">
+            <figcaption>Radar and maps</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="assets/screen-wallpapers.jpg" alt="Weather wallpapers screen">
+            <figcaption>Weather wallpapers</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="inner">
-        <div class="section-head">
-          <h2>Premium and monetization.</h2>
-          <p>Designed for a clean free experience with optional premium upgrades and remote-controlled ad settings.</p>
+      <div class="inner premium-layout">
+        <div class="premium-callout">
+          <h2>Free to use, with clear Premium upgrades.</h2>
+          <p>Premium unlocks the cleaner long-term experience: themes, wallpapers, widgets, and the premium ad-free promise.</p>
+          <div class="badge-line" aria-label="Premium product IDs">
+            <span>premium_monthly</span>
+            <span>premium_yearly</span>
+            <span>premium_lifetime</span>
+          </div>
         </div>
         <div class="premium-grid">
           <article class="premium-item">
-            <h3>premium_monthly</h3>
-            <p>Monthly premium access with trial-ready Samsung IAP configuration.</p>
+            <h3>Monthly with trial support</h3>
+            <p>Trial-ready Samsung IAP setup for users who want to try Premium before subscribing.</p>
           </article>
           <article class="premium-item">
-            <h3>premium_yearly</h3>
-            <p>Yearly premium access for users who want the best long-term value.</p>
+            <h3>Yearly best value</h3>
+            <p>A long-term option for users who want Premium themes, widgets, and wallpapers all year.</p>
           </article>
           <article class="premium-item">
-            <h3>premium_lifetime</h3>
-            <p>One-time premium unlock for themes, wallpapers, widgets, and the premium ad-free promise.</p>
+            <h3>Lifetime unlock</h3>
+            <p>A one-time upgrade for users who prefer permanent Premium access.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="data-band">
       <div class="inner">
         <div class="section-head">
-          <h2>Data and privacy basics.</h2>
-          <p>Weather keeps the app practical without requiring an account or selling personal data.</p>
+          <h2>Transparent data sources and privacy basics.</h2>
+          <p>No account is required. Location is used only with permission, and users can manage analytics from Settings.</p>
         </div>
-        <div class="policy-grid">
-          <article class="policy-card">
-            <h3>Weather data</h3>
-            <p>Forecasts use Open-Meteo through a Weather proxy that normalizes and caches responses.</p>
+        <div class="data-grid">
+          <article class="data-card">
+            <h3>Forecast source</h3>
+            <p>Weather data is provided by Open-Meteo through a Weather proxy for normalized and cached responses.</p>
           </article>
-          <article class="policy-card">
-            <h3>Location</h3>
-            <p>Location is used only when the user grants Android permission. Background location is not required.</p>
+          <article class="data-card">
+            <h3>Radar source</h3>
+            <p>Radar and map views may use RainViewer, Carto, and OpenStreetMap data.</p>
           </article>
-          <article class="policy-card">
+          <article class="data-card">
             <h3>Support</h3>
-            <p>Questions and privacy requests go to <a href="mailto:mimidandro@gmail.com">mimidandro@gmail.com</a>.</p>
+            <p>Privacy and support requests go to <a href="mailto:mimidandro@gmail.com">mimidandro@gmail.com</a>.</p>
           </article>
         </div>
       </div>
@@ -548,11 +716,15 @@
 
     <section class="download" id="download">
       <div class="inner">
+        <div class="section-head">
+          <h2>Open the Galaxy Store listing.</h2>
+          <p>Use the official Galaxy Store link for this exact Samsung package.</p>
+        </div>
         <div class="download-panel">
           <img class="icon" src="assets/weather-icon.png" alt="">
           <div>
-            <h2>Download Weather on Galaxy Store.</h2>
-            <p>Open the Galaxy Store listing for the Samsung package and install Weather when it is available in your region.</p>
+            <h2>Weather on Galaxy Store</h2>
+            <p>Install Weather when it is available in your region.</p>
             <div class="meta" aria-label="App metadata">
               <span>Package: app.weather.usa.forecast.galaxy2023p</span>
               <span>Content ID: 000006735448</span>
