@@ -10,12 +10,12 @@
     "minSecondsBetweenAppOpen": 2700
   },
   "adUnits": {
-    "banner": "",
-    "native": "",
-    "rewarded": "ca-app-pub-8235247040566090/7310424787",
-    "interstitial": "",
-    "rewardedInterstitial": "ca-app-pub-8235247040566090/8049532904",
-    "appOpen": "ca-app-pub-8235247040566090/4814255399"
+    "banner": "ca-app-pub-8235247040566090/8055527480",
+    "native": "ca-app-pub-8235247040566090/9492612098",
+    "rewarded": "ca-app-pub-8235247040566090/5074854932",
+    "interstitial": "ca-app-pub-8235247040566090/3130503866",
+    "rewardedInterstitial": "ca-app-pub-8235247040566090/1817422193",
+    "appOpen": "ca-app-pub-8235247040566090/8191258852"
   },
   "placements": {
     "homeAfterHero": false,
@@ -33,5 +33,5 @@
     "contactEmail": "mimidandro@gmail.com",
     "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
   },
-  "notes": "Galaxy Store build. Fullscreen-only mix: App Open, Rewarded Video, and Rewarded Interstitial. Banner and native placements stay disabled."
+  "notes": "Galaxy Store build for package com.aisweather.app. Production AdMob app ID: ca-app-pub-8235247040566090~3853700239. Ad units are configured from the Samsung AdMob app; placements remain conservative and can be enabled gradually."
 }
