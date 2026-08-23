@@ -3,11 +3,11 @@
   "enabled": true,
   "provider": "admob",
   "testMode": false,
-  "refreshMinutes": 30,
+  "refreshMinutes": 15,
   "frequency": {
     "minSecondsBetweenBanners": 45,
-    "minSecondsBetweenInterstitials": 600,
-    "minSecondsBetweenAppOpen": 900
+    "minSecondsBetweenInterstitials": 180,
+    "minSecondsBetweenAppOpen": 600
   },
   "adUnits": {
     "banner": "ca-app-pub-8235247040566090/8055527480",
@@ -33,5 +33,5 @@
     "contactEmail": "mimidandro@gmail.com",
     "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
   },
-  "notes": "Galaxy Store build for package app.weather.usa.forecast.galaxy2023p. Production AdMob app ID: ca-app-pub-8235247040566090~6373336030. Revenue recovery profile: app open cooldown 15 minutes, natural-break fullscreen cooldown 10 minutes, banners/native still disabled in the Samsung build."
+  "notes": "Galaxy Store build for package app.weather.usa.forecast.galaxy2023p. Production AdMob app ID: ca-app-pub-8235247040566090~6373336030. Aggressive revenue recovery profile: app open cooldown 10 minutes, natural-break fullscreen cooldown 3 minutes, banners/native still disabled in the Samsung build. Premium removes ads."
 }
