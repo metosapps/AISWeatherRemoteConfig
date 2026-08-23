@@ -3,11 +3,11 @@
   "enabled": true,
   "provider": "admob",
   "testMode": false,
-  "refreshMinutes": 60,
+  "refreshMinutes": 30,
   "frequency": {
     "minSecondsBetweenBanners": 45,
-    "minSecondsBetweenInterstitials": 1800,
-    "minSecondsBetweenAppOpen": 2700
+    "minSecondsBetweenInterstitials": 600,
+    "minSecondsBetweenAppOpen": 900
   },
   "adUnits": {
     "banner": "ca-app-pub-8235247040566090/8055527480",
@@ -25,7 +25,7 @@
     "locationsBottom": false,
     "settingsBottom": false,
     "premiumRewardedPreview": true,
-    "interstitialOnNaturalBreak": false,
+    "interstitialOnNaturalBreak": true,
     "rewardedInterstitialOnNaturalBreak": true,
     "appOpen": true
   },
@@ -33,5 +33,5 @@
     "contactEmail": "mimidandro@gmail.com",
     "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
   },
-  "notes": "Galaxy Store build for package com.aisweather.app. Production AdMob app ID: ca-app-pub-8235247040566090~3853700239. Ad units are configured from the Samsung AdMob app; placements remain conservative and can be enabled gradually."
+  "notes": "Galaxy Store build for package app.weather.usa.forecast.galaxy2023p. Production AdMob app ID: ca-app-pub-8235247040566090~6373336030. Revenue recovery profile: app open cooldown 15 minutes, natural-break fullscreen cooldown 10 minutes, banners/native still disabled in the Samsung build."
 }
