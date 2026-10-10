@@ -18,10 +18,10 @@
     "appOpen": "ca-app-pub-8235247040566090/8191258852"
   },
   "placements": {
-    "homeAfterHero": false,
-    "homeNativeAfterAdvice": false,
+    "homeAfterHero": true,
+    "homeNativeAfterAdvice": true,
     "homeAfterHourly": false,
-    "forecastInline": false,
+    "forecastInline": true,
     "locationsBottom": false,
     "settingsBottom": false,
     "premiumRewardedPreview": true,
@@ -33,5 +33,5 @@
     "contactEmail": "mimidandro@gmail.com",
     "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
   },
-  "notes": "Maximum remote ads profile for package com.aisweather.app. Production AdMob app ID: ca-app-pub-8235247040566090~3853700239. Effective current APK minimum: app open cooldown 5 minutes, natural-break fullscreen cooldown 2 minutes, config refresh 1 minute. Banners/native remain disabled by the Samsung APK. Premium removes ads."
+  "notes": "Samsung com.aisweather.app; AdMob App ID ca-app-pub-8235247040566090~3853700239. Version 1.0.3/code 4 enables one Home banner, one Home native ad, and one Forecast banner. Earlier Samsung builds block inline placements. Fullscreen cooldowns remain 2 minutes for natural breaks and 5 minutes for app open; no timer-triggered fullscreen ads. Banner refresh is managed by the SDK/AdMob console, not minSecondsBetweenBanners. Premium removes ads; consent remains required."
 }
