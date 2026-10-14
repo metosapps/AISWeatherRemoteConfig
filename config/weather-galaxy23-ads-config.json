@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "enabled": true,
+  "provider": "admob",
+  "testMode": false,
+  "refreshMinutes": 5,
+  "frequency": {
+    "minSecondsBetweenBanners": 45,
+    "minSecondsBetweenInterstitials": 0,
+    "minSecondsBetweenAppOpen": 300,
+    "interstitialEveryNClicks": 2
+  },
+  "adUnits": {
+    "banner": "ca-app-pub-8235247040566090/2434091023",
+    "rewarded": "ca-app-pub-8235247040566090/7310424787",
+    "interstitial": "ca-app-pub-8235247040566090/9936588125",
+    "rewardedInterstitial": "ca-app-pub-8235247040566090/8049532904",
+    "appOpen": "ca-app-pub-8235247040566090/4814255399"
+  },
+  "placements": {
+    "collapsibleBottom": true,
+    "homeAfterHero": false,
+    "homeNativeAfterAdvice": false,
+    "homeAfterHourly": false,
+    "forecastInline": false,
+    "locationsBottom": false,
+    "settingsBottom": false,
+    "premiumRewardedPreview": true,
+    "interstitialOnNaturalBreak": true,
+    "rewardedInterstitialOnNaturalBreak": false,
+    "appOpen": true
+  },
+  "support": {
+    "contactEmail": "mimidandro@gmail.com",
+    "privacyPolicyUrl": "https://metosapps.github.io/AISWeatherRemoteConfig/privacy.html"
+  },
+  "notes": "Package-specific production config for app.weather.usa.forecast.galaxy2023p. Collapsible bottom banner and one normal interstitial after every two eligible navigation actions. Premium removes ads; consent and no-fill behavior remain enforced."
+}
